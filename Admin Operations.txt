@@ -1,0 +1,28 @@
+Admin Operations
+=================
+
+http://localhost:8080/admin/customer/activate?username=Rasool
+POST
+
+http://localhost:8080/admin/customer/deactivate?username=Rasool
+POST
+
+// Create Customer Account
+http://localhost:8080/admin/customer/account?username=Rasool
+POST
+4a96a130
+4fc78576
+
+// Update Customer Account
+http://localhost:8080/admin/customer/account
+PUT
+
+{
+"accountNumber": "f29ebd34",
+"balance": 123.12,
+"active": true
+}
+
+// Delete Customer Account
+http://localhost:8080/admin/customer/account?accountNumber=f29ebd34
+DELETE

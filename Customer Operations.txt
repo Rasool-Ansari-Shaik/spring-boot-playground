@@ -1,0 +1,26 @@
+Customer Controller
+===================
+
+// Deposit amount
+http://localhost:8080/customer/deposit
+POST
+{
+"accountNumber": "4a96a130",
+"balance": 123.12
+}
+
+// Withdraw amount
+http://localhost:8080/customer/withdraw
+POST
+{
+"accountNumber": "4a96a130",
+"balance": 123.12
+}
+
+// Transfer amount
+http://localhost:8080/customer/transfer?toAccount=msdjdfs
+POST
+{
+"accountNumber": "4a96a130",
+"balance": 123.12
+}
