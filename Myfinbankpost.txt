@@ -1,0 +1,79 @@
+http://localhost:8080/api/auth/register ---POST
+
+body>>{
+    "username": "nikil",
+    "password": "nikil@12",
+    "email":"nikil@example.com",
+    "role": "USER"
+}
+
+
+{
+    "id": 2,
+    "username": "arun",
+    "password": "arun@12",
+    "email": "arun@example.com",
+    "role": "ADMIN",
+    "active": true
+}
+
+
+
+
+http://localhost:8080/api/admin/accounts/create
+{  "id": 1,
+"accountNumber": "a1e2929b-0f86-4e5a-be31-31792785ecf6",
+  "balance": 1000.00,
+  "user": {
+    "id": 1,
+    "username": "nikil",
+    "password": "nikil@12",
+    "email":"nikil@example.com",
+    "role": "USER"
+  }
+}
+
+{
+    "id": 2,
+    "accountNumber": "a1e2929b-0f86-4e5a-be31-31792785efrd",
+    "balance": 1000.0,
+    "user": {
+        "id": 2,
+        "username": "arun",
+        "password": "arun@12",
+        "email": "arun@example.com",
+        "role": "ADMIN",
+        "active": true
+    }
+}
+http://localhost:8080/api/admin/users/deactivate?userId=2
+{
+    "id": 2,
+    "username": "arun",
+    "password": "arun@12",
+    "email": "arun@example.com",
+    "role": "ADMIN",
+    "active": false
+}
+
+http://localhost:8080/api/admin/users/activate?userId=2
+{
+    "id": 2,
+    "username": "arun",
+    "password": "arun@12",
+    "email": "arun@example.com",
+    "role": "ADMIN",
+    "active": true
+}
+http://localhost:8080/api/admin/accounts/delete?accountId=1
+
+body>>{
+  "accountNumber": "a1e2929b-0f86-4e5a-be31-31792785efrd",
+  "balance": 1400.00,
+  "user": {
+    "id": 1
+  }
+}
+
+
+
