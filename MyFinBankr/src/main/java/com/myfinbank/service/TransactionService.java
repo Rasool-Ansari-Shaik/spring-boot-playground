@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myfinbank.Repository.TransactionRepository;
-import com.myfinbank.model.Transaction;
+import com.myfinbank.repository.TransactionRepository;
+import com.myfinbank.entity.Transaction;
 
 @Service
 public class TransactionService {
@@ -14,7 +14,7 @@ public class TransactionService {
     @Autowired
     private TransactionRepository transactionRepository;
 
-    public List<Transaction> getTransactionsByAccountId(Long accountId) {
-        return transactionRepository.findByAccountId(accountId);
+    public List<Transaction> getTransactionsByAccountId(String accountId) {
+        return transactionRepository.findByTransactionId(accountId);
     }
 }

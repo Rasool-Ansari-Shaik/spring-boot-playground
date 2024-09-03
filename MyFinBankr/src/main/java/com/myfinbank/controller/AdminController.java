@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myfinbank.model.Account;
-import com.myfinbank.model.User;
+import com.myfinbank.entity.Account;
+import com.myfinbank.entity.User;
 import com.myfinbank.service.AccountService;
 import com.myfinbank.service.UserService;
 

@@ -3,7 +3,7 @@ package com.myfinbank.entity;
 
 
 import jakarta.persistence.*;
-import java.util.Set;
+
 
 @Entity
 public class Role {

@@ -5,8 +5,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myfinbank.Repository.UserRepository;
-import com.myfinbank.model.User;
+import com.myfinbank.repository.UserRepository;
+import com.myfinbank.entity.User;
 
 @Service
 public class UserService {

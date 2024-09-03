@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myfinbank.model.Account;
-import com.myfinbank.model.Transaction;
+import com.myfinbank.entity.Account;
+import com.myfinbank.entity.Transaction;
 import com.myfinbank.service.AccountService;
-import com.myfinbank.service.UserService;
+
 
 @RestController
 @RequestMapping("/api/customer")
@@ -21,8 +21,7 @@ public class CustomerController {
     @Autowired
     private AccountService accountService;
 
-    @Autowired
-    private UserService userService;
+    
 
     @PostMapping("/deposit")
     public Account deposit(@RequestParam Long accountId, @RequestParam Double amount) {
@@ -44,7 +43,7 @@ public class CustomerController {
     }
 
     @GetMapping("/transactions")
-    public List<Transaction> getTransactionHistory(@RequestParam Long accountId) {
+    public List<Transaction> getTransactionHistory(@RequestParam String accountId) {
         return accountService.getTransactionHistory(accountId);
     }
 }

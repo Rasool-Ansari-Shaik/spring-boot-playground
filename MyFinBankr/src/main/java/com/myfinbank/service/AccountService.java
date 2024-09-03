@@ -1,19 +1,17 @@
 package com.myfinbank.service;
 
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.myfinbank.Repository.AccountRepository;
-import com.myfinbank.Repository.TransactionRepository;
-import com.myfinbank.Repository.UserRepository;
-import com.myfinbank.model.Account;
-import com.myfinbank.model.Transaction;
-import com.myfinbank.model.User;
+import com.myfinbank.repository.TransactionRepository;
+import com.myfinbank.repository.AccountRepository;
+import com.myfinbank.repository.UserRepository;
+import com.myfinbank.entity.Account;
+import com.myfinbank.entity.Transaction;
+import com.myfinbank.entity.User;
 
 @Service
 public class AccountService {
@@ -93,8 +91,8 @@ account.setUser(user);
         return transaction;
     }
 
-    public List<Transaction> getTransactionHistory(Long accountId) {
-        return transactionRepository.findByAccountId(accountId);
+    public List<Transaction> getTransactionHistory(String accountId) {
+        return transactionRepository.findByTransactionId(accountId);
     }
     
  // Find all accounts (used in AdminController)

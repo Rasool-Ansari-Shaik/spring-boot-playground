@@ -2,9 +2,6 @@ package com.myfinbank.entity;
 
 
 import jakarta.persistence.*;
-import java.util.Set;
-
-import jakarta.persistence.*;
 
 @Entity
 @Table(name = "app_user") // Rename to avoid reserved keywords
